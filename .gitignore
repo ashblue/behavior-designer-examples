@@ -31,7 +31,6 @@ sysinfo.txt
 
 # Builds
 *.apk
-*.unitypackage
 
 # Plugins are ignored since they must be imported by the user
 Assets/Plugins
