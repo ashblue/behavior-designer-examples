@@ -315,6 +315,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1349521267608492, guid: 92fb679d3f98f419f8f14d967d56830e, type: 2}
+      propertyPath: m_Name
+      value: InjectableBehaviorTreeExample
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92fb679d3f98f419f8f14d967d56830e, type: 2}
   m_IsPrefabParent: 0

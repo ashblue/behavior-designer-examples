@@ -67,7 +67,7 @@ MonoBehaviour:
       startIndex: 
       variableStartIndex: 
       JSONSerialization: "{\n\t\"EntryTask\":{\n\t\t\"Type\":\"BehaviorDesigner.Runtime.Tasks.EntryTask\",\n\t\t\"NodeData\":{\n\t\t\t\"Offset\":\"(650.5,30)\"\n\t\t},\n\t\t\"ID\":0,\n\t\t\"Name\":\"Entry\",\n\t\t\"Instant\":true\n\t},\n\t\"RootTask\":{\n\t\t\"Type\":\"BehaviorDesigner.Runtime.Tasks.BehaviorTreeReference\",\n\t\t\"NodeData\":{\n\t\t\t\"Offset\":\"(0.5,120)\"\n\t\t},\n\t\t\"ID\":1,\n\t\t\"Name\":\"Behavior
-        Tree Reference\",\n\t\t\"Instant\":true,\n\t\t\"ExternalBehavior[]externalBehaviors\":[null,null],\n\t\t\"SharedNamedVariable[]variables\":[],\n\t\t\"Booleancollapsed\":false\n\t},\n\t\"Variables\":[{\n\t\t\"Type\":\"Adnc.ThirdParty.BehaviorDesignerHelpers.SharedExternalBehaviorTree\",\n\t\t\"Name\":\"treeA\",\n\t\t\"IsShared\":true\n\t},{\n\t\t\"Type\":\"Adnc.ThirdParty.BehaviorDesignerHelpers.SharedExternalBehaviorTree\",\n\t\t\"Name\":\"treeB\",\n\t\t\"IsShared\":true\n\t}]\n}"
+        Tree Reference\",\n\t\t\"Instant\":true,\n\t\t\"ExternalBehavior[]externalBehaviors\":[null,null],\n\t\t\"SharedNamedVariable[]variables\":[],\n\t\t\"Booleancollapsed\":false\n\t},\n\t\"Variables\":[{\n\t\t\"Type\":\"Adnc.ThirdParty.BehaviorDesignerHelpers.SharedExternalBehaviorTree\",\n\t\t\"Name\":\"onPatrol\",\n\t\t\"IsShared\":true\n\t},{\n\t\t\"Type\":\"Adnc.ThirdParty.BehaviorDesignerHelpers.SharedExternalBehaviorTree\",\n\t\t\"Name\":\"onAttack\",\n\t\t\"IsShared\":true\n\t}]\n}"
       fieldSerializationData:
         typeName: []
         fieldNameHash: 

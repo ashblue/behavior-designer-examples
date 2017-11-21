@@ -12,6 +12,7 @@ namespace Adnc.ThirdParty.BehaviorDesignerHelpers {
         [Tooltip("Include external behavior trees as variables")]
         public SharedExternalBehaviorTree[] externalBehaviorVars;
 
+        // Added to prevent null BT nodes from crashing in-case they're optional (currently crashes entire tree on null)
         [Tooltip("If a behavior tree reference is null, trigger an error?")]
         public bool errorOnNull = true;
 
@@ -20,15 +21,15 @@ namespace Adnc.ThirdParty.BehaviorDesignerHelpers {
                 return base.GetExternalBehaviors();
             }
 
+            // @TODO LINQ logic could be optimized
             var externalBts = externalBehaviorVars.Select(btVar => (ExternalBehavior)btVar.Value)
-                .Union(externalBehaviors)
-                .ToArray();
+                .Union(externalBehaviors);
 
             if (!errorOnNull) {
-                externalBts = externalBts.Where(bt => bt != null).ToArray();
+                externalBts = externalBts.Where(bt => bt != null);
             }
 
-            return externalBts;
+            return externalBts.ToArray();
         }
 
         public override void OnReset () {
