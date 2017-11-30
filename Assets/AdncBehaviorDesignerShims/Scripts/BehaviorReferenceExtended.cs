@@ -23,13 +23,20 @@ namespace Adnc.ThirdParty.BehaviorDesignerHelpers {
 
             // @TODO LINQ logic could be optimized
             var externalBts = externalBehaviorVars.Select(btVar => (ExternalBehavior)btVar.Value)
-                .Union(externalBehaviors);
+                .Union(externalBehaviors)
+                .ToArray();
 
             if (!errorOnNull) {
-                externalBts = externalBts.Where(bt => bt != null);
+                externalBts = externalBts.Where(bt => bt != null).ToArray();
             }
 
-            return externalBts.ToArray();
+            // Edge case since external BT references silently fail if returning empty
+            // Causes odd behavior with parallel selectors
+            if (externalBts.Length == 0) {
+                return new ExternalBehavior[] { BehaviorDesignerSettings.Current.emptyTree };
+            }
+
+            return externalBts;
         }
 
         public override void OnReset () {
